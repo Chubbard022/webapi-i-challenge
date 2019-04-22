@@ -15,7 +15,9 @@ Use Node.js and Express to build an API that performs CRUD operations on users.
 - **Fork** and **Clone** this repository.
 DONE
 - **CD into the folder** where you cloned the repository.
+DONE
 - Type `yarn` or `npm install` to download all dependencies listed inside `package.json`.
+DONE
 
 ### Database access
 
@@ -32,6 +34,7 @@ Now that we have a way to add, update, remove and retrieve data from the provide
 ### Start the API and Implement Requirements
 
 - To start the server, type `yarn server` or `npm run server` from the root folder (where the _package.json_ file is). The server is configured to restart automatically as you make changes.
+DONE
 - Add the code necessary to implement the API requirements.
 - **Test the API using _Postman_ as you work through the exercises.**
 
