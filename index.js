@@ -19,6 +19,7 @@ server.get("/api/users",(req,res)=>{
         res.status(500).json({ error: "The users information could not be retrieved." })
     })
 })
+
 //---------------------------------------------------------------------
 //server get method will return user object with specific id's
 server.get("/api/users/:id",(req,res)=>{
@@ -31,6 +32,7 @@ server.get("/api/users/:id",(req,res)=>{
         res.status(404).json({ message: "The user with the specified ID does not exist." })
     })
 })
+
 //---------------------------------------------------------------------
 //server post method creates a user using the information sent inside the request body
 
@@ -38,8 +40,12 @@ server.post("/api/users",(req,res)=>{
     const userPost = req.body;
 
     db.insert(userPost)
-    .then()
-    .catch()
+    .then(users=>{
+        res.status(201).json(users)
+    })
+    .catch(err=>{
+        res.status(400).json({ errorMessage: "Please provide name and bio for the user." })
+    })
 })
 //---------------------------------------------------------------------
 server.listen(5000, ()=>{
